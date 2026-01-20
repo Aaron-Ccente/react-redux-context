@@ -1,4 +1,6 @@
-Arquitectura Frontend para React-redux
+## Arquitectura Frontend para React + Redux
+
+```txt
 src/
 │── app/
 │   ├── store.js
@@ -44,3 +46,4 @@ src/
 │
 │── App.jsx
 │── main.jsx
+```
