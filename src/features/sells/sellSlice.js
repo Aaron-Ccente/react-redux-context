@@ -1,11 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    value: {
-        id_article: 0,
-        id_user: 0,
-        count: 0
-    }
+    value: {}
 }
 
 const sellSlice = createSlice({

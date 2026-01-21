@@ -1,27 +1,27 @@
 import { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { newUser } from "../userSlice";
+import { useDispatch } from "react-redux";
+import { addUser } from "../userSlice";
 
 export default function UserForm() {
-  const userStore = useSelector((state) => state.user.value);
-  const [user, SetUser] = useState({
-    name: "",
-    lastname: "",
-    email: "",
-    phone: "",
-  });
   const dispatch = useDispatch();
+  const [user,setUser] = useState({
+    name: '',
+    lastname: '',
+    email: '',
+    phone: ''
+  });
 
   const handleChange = (event) => {
-    const { name, value } = event.target;
-    SetUser((prev) => ({ ...prev, [name]: value }));
-  };
+    const {name, value} = event.target;
+    setUser((prev)=>({
+      ...prev, [name]: value
+    }))
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(newUser(user));
-    console.log("Se envio al store correctamente: ", userStore);
-  };
+    dispatch(addUser(user))
+  }
 
   return (
     <div>

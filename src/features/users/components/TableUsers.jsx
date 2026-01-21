@@ -1,12 +1,8 @@
 import { useSelector } from "react-redux";
 
 export default function TableUsers() {
-  const userStore = useSelector((state) => state.user.value);
-
-    if (userStore.length === 0) {
-    return <div>No hay usuarios registrados</div>;
-    }
-
+  console.log("Usuarios en la local storage: ",JSON.parse(localStorage.getItem("users")))
+  const userStore = useSelector((state)=>state.user.value);
   return (
     <table>
       <thead>

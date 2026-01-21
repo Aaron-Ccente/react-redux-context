@@ -1,12 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
 
 const initialState = {
-    value: {
-        id_article: 0,
-        name: '',
-        description: '',
-        price: 0.0
-    }
+    value: {}
 }
 
 const articleSlice = createSlice({
