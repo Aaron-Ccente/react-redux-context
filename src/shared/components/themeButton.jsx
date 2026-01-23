@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
+
 export default function ThemeButton() {
     const [theme, setTheme] = useState('light');
     const root = document.documentElement;
-
     const handleChangeTheme = () =>{
         const newTheme = theme === 'light' ? 'dark': 'light';
         if(newTheme === 'dark'){
@@ -15,6 +15,6 @@ export default function ThemeButton() {
     }
 
   return (
-    <div onClick={handleChangeTheme}>{theme === 'dark'? 'Cambiar a modo claro': 'Cambiar a modo oscuro'}</div>
+    <div className='bg-background text-foreground w-fit ' onClick={handleChangeTheme}>{theme==='light'? 'Cambiar a modo oscuro':'Cambiar a modo claro' }</div>
   )
 }
