@@ -1,28 +1,24 @@
-import { useSelector } from "react-redux";
+import { Table } from "@shared/components/Table";
 
 export default function TableUsers() {
-  console.log("Usuarios en la local storage: ",JSON.parse(localStorage.getItem("users")))
-  const userStore = useSelector((state)=>state.user.value);
+
+  const t_head = [
+    { title: "Nombre", key: "name" },
+    { title: "Email", key: "email" },
+  ];
+
+  const t_body = [
+    { name: "AA", email: "aa@mail.com" },
+    { name: "Ana", email: "ana@mail.com" },
+  ];
+
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Apellidos</th>
-          <th>Email</th>
-          <th>Phone</th>
-        </tr>
-      </thead>
-      <tbody>
-        {userStore.map((user, index) => (
-          <tr key={index}>
-            <td>{user.name}</td>
-            <td>{user.lastname}</td>
-            <td>{user.email}</td>
-            <td>{user.phone}</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <Table
+      t_head={t_head}
+      t_body={t_body}
+      actions={(row) => (
+        <button onClick={() => console.log(row)}>Editar</button>
+      )}
+    />
   );
 }

@@ -1,12 +1,11 @@
-import UserForm from '../features/users/components/UserForm'
-import TableUsers from '../features/users/components/tableUsers'
+import TableUsers from '@features/users/components/TableUsers'
+// import UserForm from '../features/users/components/UserForm'
+
 import ThemeButton from '../shared/components/themeButton'
 
 export default function User() {
   return (
     <div>
-        <UserForm/>
-        <p>---------------------------------</p>
         <TableUsers/>
         <ThemeButton/>
     </div>

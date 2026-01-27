@@ -5,6 +5,7 @@
   --foreground: #000;
   --primary: #000;
   --secondary: #160a4f;
+  --border: #160a4f;
 }
 
 .dark{
@@ -12,6 +13,7 @@
   --foreground: #fff;
   --primary: #fff;
   --secondary: #b5b5b7;
+  --border: #b5b5b7;
 }
 
 @theme {
@@ -19,4 +21,5 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-border: var(--border);
 }
